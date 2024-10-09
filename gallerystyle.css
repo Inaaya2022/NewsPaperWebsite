@@ -1,0 +1,101 @@
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #FF69B4;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* General styles */
+body {
+    font-family: 'Georgia', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FF69B4;
+    color: #fff;
+}
+.page-title h1{
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.photo-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-wrapper {
+    max-width: 80%; /* image doesn't exceed container size */
+}
+
+#gallery-image {
+    width: 100%;
+    height: auto;
+    max-width: 500px; 
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #FF69B4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #FF85B1;
+}
+.Text{
+   color:#FF69B4; 
+}
+.advertisment{
+    text-align: center;
+    border: #000;
+}
+.advertisment p{
+    color: white;
+}
+.advertisment:hover {
+    
+    color: blue;
+    text-underline-position: below;
+   
+}
+.advertisment:hover p {
+    
+    color: blue;
+    text-underline-position: below;
+   
+}

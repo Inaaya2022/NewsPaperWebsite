@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper Landing Page</title>
+    <link rel="stylesheet" href="gallerystyle.css">
+</head>
+<body>
+    
+        
+        <header class="article-header">
+            <h1>Mystic Falls Historical Journal - Articles</h1>
+            <p>By Inaaya Chapman | September 23rd 2024</p>
+           
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="article.html">Articles</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+            
+    
+   
+        </header>
+    <div class="page-title " >
+        <h1> A photo recollection</h1>
+    </div>
+    <main class="photo-gallery">
+        
+        <div class="photo-wrapper">
+            <img id="gallery-image" src="Photographic Print_ Achilles Binding Patroclus' Wound by Mehau Kulyk _ 24x24in.jpg" alt="Image description">
+        </div>
+        <div class ="Text"> 
+            <p>photos provided by archaeologist</p>
+        </div>
+        <div class="gallery-controls">
+            <button id="previous">Previous</button>
+            <button id="next">Next</button>
+        </div>
+       
+    </main>
+    <div class ="advertisment"> 
+        <h1>Come Join us for mystic falls tours!</h1>
+        <p>Come where the legend Qetsiyah visited before her she fullfilled her promise...</p>
+    </div>
+
+    <script>
+        //  images for the gallery
+        var images = [
+            "Photographic Print_ Achilles Binding Patroclus' Wound by Mehau Kulyk _ 24x24in.jpg",
+            "S5 Qetsiyah.jpg",
+            "Making Kyphi or Kapet, the Egyptian traditional temple incense_.jpg",
+            "Giclee Print_ Scene from Ancient Greek Vase with Nymphs Playing Lyre and Flute before Apollo by Piringer _ 12x9in.jpg",
+            "Circe_Offering_the_Cup_to_Odysseus.jpg"
+        ];
+    
+        //image array
+        var currentIndex = 0;
+    
+        
+        var galleryImage = document.getElementById('gallery-image');
+    
+        // image buttons
+        var previousButton = document.getElementById('previous');
+        var nextButton = document.getElementById('next');
+    
+      
+        function updateImage(index) {
+           
+            galleryImage.src = images[index];
+        }
+    
+    
+        previousButton.addEventListener('click', function() {
+           
+            if (currentIndex > 0) {
+                currentIndex = currentIndex - 1;
+            } 
+          
+            else {
+                currentIndex = images.length - 1;
+            }
+        
+            updateImage(currentIndex);
+        });
+    
+        // When the "Next" button is clicked:
+        nextButton.addEventListener('click', function() {
+          
+            if (currentIndex < images.length - 1) {
+                currentIndex = currentIndex + 1;
+            } 
+          
+            else {
+                currentIndex = 0;
+            }
+          
+            updateImage(currentIndex);
+        });
+    </script>
+    
+</body>
+</html>
